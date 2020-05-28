@@ -1,0 +1,25 @@
+// Font sizes and line heights calculated using golden ratio
+// https://grtcalculator.com/
+
+body {
+  width: 700px;
+  margin: 0 auto;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+h1 {
+  font-size: 42px;
+  line-height: 66px;
+}
+
+h2 {
+  font-size: 33px;
+  line-height: 53px;
+}
+
+h3 {
+  font-size: 26px;
+  line-height: 42px;
+}
