@@ -1,3 +1,5 @@
+title = "Evan Relf"
+
 # The URL the site will be built for
 base_url = "https://evanrelf.com"
 
@@ -14,4 +16,3 @@ build_search_index = true
 
 # Put all your custom variables here
 [extra]
-title = "Evan Relf"
