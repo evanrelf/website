@@ -2,12 +2,13 @@
 <html>
 
 <head>
-  <title>Evan Relf</title>
+  <title>{{ config.extra.title }}</title>
   <link rel="stylesheet" href="{{ get_url(path="base.css") | safe }}"/>
 </head>
 
 <body>
   <ul>
+    <h3>{{ config.extra.title }}</h1>
     {% for nav in config.extra.nav %}
     <a href="{{ nav.url }}"><li>{{ nav.name }}</li></a>
     {% endfor %}
