@@ -1,7 +1,5 @@
-let
-  pkgs = import ./nixpkgs.nix {};
+# If this file didn't exist, `nix-shell` would use `default.nix` anyways. In
+# case someone doesn't know that, I'm keeping this file around as a form of
+# documentation.
 
-in
-  pkgs.mkShell {
-    buildInputs = with pkgs; [ zola ];
-  }
+import ./default.nix
