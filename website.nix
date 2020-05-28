@@ -1,15 +1,25 @@
-{ stdenv, zola }:
+{ nix-gitignore, stdenv, zola }:
 
-stdenv.mkDerivation {
-  name = "website";
-  src = ./.;
-  buildInputs = [ zola ];
+let
+  src =
+    nix-gitignore.gitignoreSource [
+      "/.git/"
+      "/*.nix"
+    ] ./.;
 
-  buildPhase = ''
-    ${zola}/bin/zola build
-  '';
+in
+  stdenv.mkDerivation {
+    name = "website";
 
-  installPhase = ''
-    cp -r public "$out"
-  '';
-}
+    inherit src;
+
+    buildInputs = [ zola ];
+
+    buildPhase = ''
+      ${zola}/bin/zola build
+    '';
+
+    installPhase = ''
+      cp -r public "$out"
+    '';
+  }
