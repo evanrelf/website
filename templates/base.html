@@ -4,7 +4,7 @@
 <head lang="en">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ config.extra.title }}</title>
+  <title>{% block title %}{{ config.extra.title }}{% endblock title %}</title>
   <link rel="stylesheet" href="{{ get_url(path="new.css") | safe }}"/>
   <link rel="stylesheet" href="{{ get_url(path="base.css") | safe }}"/>
 </head>
