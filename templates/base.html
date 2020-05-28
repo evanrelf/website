@@ -11,7 +11,7 @@
 
 <body>
   <header>
-    <h3>{{ config.extra.title }}</h1>
+    <h3><a href="{{ config.base_url }}">{{ config.extra.title }}</a></h3>
     <ul>
       {% for nav in config.extra.nav %}
       <li><a href="{{ nav.url }}">{{ nav.name }}</a></li>
