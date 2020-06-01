@@ -55,6 +55,12 @@ a {
   color: inherit;
 }
 
+img {
+  display: block;
+  margin: auto;
+  border-radius: 5px;
+}
+
 pre, code {
   border: 1px solid lightgray;
   border-radius: 5px;
@@ -82,6 +88,10 @@ pre code {
   body {
     color: #eee;
     background-color: #111;
+  }
+
+  img {
+    opacity: 0.75;
   }
 
   pre {
