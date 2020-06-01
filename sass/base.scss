@@ -52,6 +52,22 @@ a {
 }
 
 pre, code {
-  font-size: 15px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  font-size: 14px;
   font-family: Monaco, Consolas, monospace;
+}
+
+pre {
+  padding: 10px;
+}
+
+code {
+  padding: 2px 4px;
+}
+
+pre code {
+  border: 0;
+  padding: 0;
+  font-size: 15px;
 }
