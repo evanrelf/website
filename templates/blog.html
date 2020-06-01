@@ -4,11 +4,8 @@
 {{ section.title }} | {{ config.title }}
 {% endblock title %}
 
-{% block header %}
-<h1>{{ section.title }}</h1>
-{% endblock header %}
-
 {% block content %}
+<h1>{{ section.title }}</h1>
 <ul>
   {% for page in section.pages %}
   <li>{{ page.date }} - <a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>

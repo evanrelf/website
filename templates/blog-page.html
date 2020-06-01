@@ -4,11 +4,8 @@
 {{ page.title }} | {{ config.title }}
 {% endblock title %}
 
-{% block header %}
+{% block content %}
 <h1>{{ page.title }}</h1>
 <p>Published {{ page.date }}</p>
-{% endblock header %}
-
-{% block content %}
 <p>{{ page.content | safe }}</p>
 {% endblock content %}
