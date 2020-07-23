@@ -4,5 +4,6 @@ compile_sass = true
 highlight_code = true
 highlight_theme = "Tomorrow"
 build_search_index = true
+generate_feed = true
 
 [extra]
