@@ -2,6 +2,8 @@
 sort_by = "date"
 +++
 
+<img src="/avatar.jpg" id="avatar">
+
 Software developer and functional programming enthusiast, working at [Awake
 Security](https://awakesecurity.com).
 
