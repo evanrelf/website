@@ -31,13 +31,17 @@ body {
   color: #111;
 }
 
-header {
+#header {
   background-color: #111;
   color: #fafafa;
   font-weight: bold;
   padding: 10px;
-  margin-bottom: 30px;
   border-bottom: 1px solid #111;
+}
+
+#content {
+  padding: 30px 10px;
+  header { border-bottom: 1px solid #111; }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -67,6 +71,7 @@ img {
   display: block;
   margin: auto;
   border-radius: 5px;
+  max-width: 100%;
 }
 
 pre, code {

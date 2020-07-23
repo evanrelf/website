@@ -10,10 +10,12 @@
 </head>
 
 <body>
-  <header>
+  <header id="header">
     <a href="/">{{ config.title }}</a>
   </header>
+  <div id="content">
   {% block content %}{% endblock content %}
+  </div>
 </body>
 
 </html>
