@@ -82,6 +82,13 @@ pre code {
   font-size: 15px;
 }
 
+.zola-anchor {
+  color: #ccc;
+  text-decoration: none;
+  margin-left: 10px;
+  &:hover { text-decoration: underline; }
+}
+
 // Dark mode
 
 @media (prefers-color-scheme: dark) {
