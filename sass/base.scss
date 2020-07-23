@@ -40,8 +40,25 @@ body {
 }
 
 #content {
-  padding: 30px 10px 100px;
+  padding: 30px 10px;
   header { border-bottom: 1px solid #111; }
+}
+
+#footer {
+  padding: 0 10px;
+  margin-bottom: 100px;
+  text-align: center;
+  color: #bbb;
+  li {
+    display: inline;
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  ul {
+    padding-left: 0;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -96,7 +113,7 @@ pre code {
 }
 
 .zola-anchor {
-  color: #ccc;
+  color: #bbb;
   text-decoration: none;
   margin-left: 10px;
   &:hover { text-decoration: underline; }
