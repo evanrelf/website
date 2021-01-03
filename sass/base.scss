@@ -1,6 +1,12 @@
 // Font sizes and line heights calculated using golden ratio
 // https://grtcalculator.com/
 
+$black: #111;
+$silver: #bbb;
+$gray: #444;
+$white: #fafafa;
+$offwhite: #eee;
+
 p {
   font-size: 16px;
   line-height: 28px;
@@ -27,28 +33,27 @@ body {
   max-width: 700px;
   margin: 0 auto;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
-  background-color: #fafafa;
-  color: #111;
+  background-color: $white;
+  color: $black;
 }
 
 #header {
-  background-color: #111;
-  color: #fafafa;
+  background-color: $black;
+  color: $white;
   font-weight: bold;
   padding: 10px;
-  border-bottom: 1px solid #111;
 }
 
 #content {
   padding: 30px 10px;
-  header { border-bottom: 1px solid #bbb; }
+  header { border-bottom: 1px solid $silver; }
 }
 
 #footer {
   padding: 0 10px;
   margin-bottom: 100px;
   text-align: center;
-  color: #bbb;
+  color: $silver;
   li {
     display: inline;
     margin-right: 10px;
@@ -71,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 hr {
-  background-color: #bbb;
+  background-color: $silver;
   height: 1px;
   border: none;
 }
@@ -80,7 +85,7 @@ blockquote {
   font-style: italic;
   margin-left: inherit;
   padding-left: 20px;
-  border-left: 4px solid gray;
+  border-left: 4px solid $gray;
 }
 
 ul, ol {
@@ -107,7 +112,7 @@ img {
 }
 
 pre, code {
-  border: 1px solid lightgray;
+  border: 1px solid $silver;
   border-radius: 5px;
   font-family: Monaco, Consolas, monospace;
 }
@@ -129,7 +134,7 @@ pre code {
 }
 
 .zola-anchor {
-  color: #bbb;
+  color: $silver;
   text-decoration: none;
   margin-left: 10px;
   &:hover { text-decoration: underline; }
@@ -138,16 +143,11 @@ pre code {
 // Dark mode
 
 @media (prefers-color-scheme: dark) {
-  body {
-    color: #eee;
-    background-color: #111;
-  }
+  html { filter: invert(100%); }
+  img { filter: invert(100%); }
 
-  img {
-    opacity: 0.75;
-  }
-
-  pre {
-    filter: invert(100%);
+  #header {
+    color: $black;
+    background-color: $silver;
   }
 }
