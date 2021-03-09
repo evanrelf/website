@@ -4,6 +4,7 @@
   "author": "Evan Relf <evan@evanrelf.com>",
   "license": "ISC",
   "scripts": {
+    "postinstall": "./scripts/node2nix",
     "build": "./scripts/build",
     "node2nix": "./scripts/node2nix"
   },
