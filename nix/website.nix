@@ -1,7 +1,15 @@
 { callPackage, nix-gitignore, nodejs, stdenv, zola }:
 
 let
-  nodeDependencies = (callPackage ./node2nix {}).nodeDependencies;
+  nodeDependencies =
+    (callPackage ./node2nix {}).nodeDependencies.overrideAttrs (old: {
+      # Disable `npm install` so that `scripts/node2nix` doesn't get run
+      # during the `postinstall` script.
+      #
+      # The `node2nix` derivation only uses `package.json` and
+      # `package-lock.json`, so `scripts/node2nix` is missing.
+      dontNpmInstall = true;
+    });
 
 in
   stdenv.mkDerivation {
