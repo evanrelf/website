@@ -1,5 +1,19 @@
-let
-  pkgs = import ./nixpkgs.nix {};
+{ pkgs ? import ./nixpkgs.nix {} }:
 
-in
-  pkgs.callPackage ./website.nix {}
+pkgs.stdenv.mkDerivation {
+  name = "website";
+
+  src = pkgs.nix-gitignore.gitignoreSource [ ./.nixignore ] ./.;
+
+  buildInputs = [ pkgs.zola ];
+
+  phases = [ "unpackPhase" "buildPhase" "installPhase" ];
+
+  buildPhase = ''
+    zola build
+  '';
+
+  installPhase = ''
+    cp -r public "$out"
+  '';
+}
