@@ -1,9 +1,11 @@
 title = "Evan Relf"
 base_url = "/"
 compile_sass = true
-highlight_code = true
-highlight_theme = "Tomorrow"
 build_search_index = true
 generate_feed = true
+
+[markdown]
+highlight_code = true
+highlight_theme = "Tomorrow"
 
 [extra]
