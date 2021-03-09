@@ -5,10 +5,13 @@ let
 
 in
   pkgs.mkShell {
-    inputsFrom = [ website ];
-
     buildInputs = [
       pkgs.nodePackages.node2nix
       pkgs.nodejs
+      pkgs.zola
     ];
+
+    shellHook = ''
+      export PATH="./node_modules/.bin:$PATH"
+    '';
   }
