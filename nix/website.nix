@@ -9,16 +9,21 @@ in
 
     src = nix-gitignore.gitignoreSource [ ../.nixignore ] ../.;
 
-    buildInputs = [ nodejs zola ];
+    buildInputs = [
+      nodeDependencies
+      nodejs
+      zola
+    ];
 
     phases = [ "unpackPhase" "buildPhase" "installPhase" ];
 
     NODE_ENV = "production";
 
-    buildPhase = ''
+    postUnpack = ''
       ln -s ${nodeDependencies}/lib/node_modules ./node_modules
-      export PATH="${nodeDependencies}/bin:$PATH"
+    '';
 
+    buildPhase = ''
       postcss --replace static/tailwind.css
       zola build
     '';
