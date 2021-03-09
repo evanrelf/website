@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+set -Eeuo pipefail
+IFS=$'\n\t'
+
+mkdir -p nix/node2nix/
+
+node2nix \
+  --development \
+  --nodejs-14 \
+  --lock package-lock.json \
+  --output nix/node2nix/node-packages.nix \
+  --node-env nix/node2nix/node-env.nix \
+  --composition nix/node2nix/default.nix
