@@ -27,6 +27,11 @@ in
 
     NODE_ENV = "production";
 
+    # Disable annoying messages from `npm`
+    NO_UPDATE_NOTIFIER = true;
+    NPM_CONFIG_AUDIT = false;
+    NPM_CONFIG_FUND = false;
+
     postUnpack = ''
       ln -s ${nodeDependencies}/lib/node_modules ./node_modules
     '';

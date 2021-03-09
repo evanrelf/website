@@ -12,6 +12,11 @@ in
     ];
 
     shellHook = ''
+      # Disable annoying messages from `npm`
+      export NO_UPDATE_NOTIFIER="true"
+      export NPM_CONFIG_AUDIT="false"
+      export NPM_CONFIG_FUND="false"
+
       export PATH="./node_modules/.bin:$PATH"
     '';
   }
