@@ -5,8 +5,9 @@
   "license": "ISC",
   "scripts": {
     "postinstall": "./scripts/node2nix",
+    "node2nix": "./scripts/node2nix",
     "build": "./scripts/build",
-    "node2nix": "./scripts/node2nix"
+    "serve": "zola serve --drafts"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.5",

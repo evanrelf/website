@@ -17,6 +17,8 @@ in
       export NPM_CONFIG_AUDIT="false"
       export NPM_CONFIG_FUND="false"
 
+      export NODE_ENV="development"
+
       export PATH="./node_modules/.bin:$PATH"
     '';
   }
