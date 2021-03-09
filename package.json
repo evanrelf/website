@@ -4,7 +4,8 @@
   "author": "Evan Relf <evan@evanrelf.com>",
   "license": "ISC",
   "scripts": {
-    "build": "zola build && postcss --replace public/tailwind.css"
+    "build": "./scripts/build",
+    "node2nix": "./scripts/node2nix"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.5",

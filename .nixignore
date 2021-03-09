@@ -2,6 +2,7 @@
 !*/
 !/content/**
 !/sass/**
+!/scripts/**
 !/static/**
 !/templates/**
 !/config.toml
