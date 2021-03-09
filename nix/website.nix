@@ -1,19 +1,26 @@
-{ nix-gitignore, stdenv, zola }:
+{ callPackage, nix-gitignore, stdenv, zola }:
 
-stdenv.mkDerivation {
-  name = "website";
+let
+  nodeDependencies = (callPackage ./node2nix {}).nodeDependencies;
 
-  src = nix-gitignore.gitignoreSource [ ../.nixignore ] ../.;
+in
+  stdenv.mkDerivation {
+    name = "website";
 
-  buildInputs = [ zola ];
+    src = nix-gitignore.gitignoreSource [ ../.nixignore ] ../.;
 
-  phases = [ "unpackPhase" "buildPhase" "installPhase" ];
+    buildInputs = [ zola ];
 
-  buildPhase = ''
-    zola build
-  '';
+    phases = [ "unpackPhase" "buildPhase" "installPhase" ];
 
-  installPhase = ''
-    cp -R public "$out"
-  '';
-}
+    buildPhase = ''
+      ln -s ${nodeDependencies}/lib/node_modules ./node_modules
+      export PATH="${nodeDependencies}/bin:$PATH"
+
+      zola build
+    '';
+
+    installPhase = ''
+      cp -R public "$out"
+    '';
+  }

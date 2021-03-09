@@ -5,3 +5,7 @@
 !/static/**
 !/templates/**
 !/config.toml
+!/package.json
+!/package-lock.json
+!/postcss.config.js
+!/tailwind.config.js
