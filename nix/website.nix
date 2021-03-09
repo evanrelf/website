@@ -24,8 +24,7 @@ in
     '';
 
     buildPhase = ''
-      postcss --replace static/tailwind.css
-      zola build
+      npm run build
     '';
 
     installPhase = ''
