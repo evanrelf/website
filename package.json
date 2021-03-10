@@ -4,7 +4,7 @@
   "author": "Evan Relf <evan@evanrelf.com>",
   "license": "ISC",
   "scripts": {
-    "postinstall": "./scripts/node2nix",
+    "postinstall": "[ ! -f './scripts/node2nix' ] || ./scripts/node2nix",
     "node2nix": "./scripts/node2nix",
     "build": "./scripts/build",
     "serve": "zola serve --drafts"

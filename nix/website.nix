@@ -1,15 +1,7 @@
 { callPackage, nix-gitignore, nodejs, stdenv, zola }:
 
 let
-  nodeDependencies =
-    (callPackage ./node2nix {}).nodeDependencies.overrideAttrs (old: {
-      # Disable `npm install` so that `scripts/node2nix` doesn't get run
-      # during the `postinstall` script.
-      #
-      # The `node2nix` derivation only uses `package.json` and
-      # `package-lock.json`, so `scripts/node2nix` is missing.
-      dontNpmInstall = true;
-    });
+  nodeDependencies = (callPackage ./node2nix {}).nodeDependencies;
 
 in
   stdenv.mkDerivation {
@@ -32,11 +24,9 @@ in
     NPM_CONFIG_AUDIT = false;
     NPM_CONFIG_FUND = false;
 
-    postUnpack = ''
-      ln -s ${nodeDependencies}/lib/node_modules ./node_modules
-    '';
-
     buildPhase = ''
+      ln -s "${nodeDependencies}/lib/node_modules" node_modules
+
       npm run build
     '';
 
