@@ -9,7 +9,7 @@ in
 
     src = nix-gitignore.gitignoreSource [ ../.nixignore ] ../.;
 
-    buildInputs = [
+    nativeBuildInputs = [
       nodeDependencies
       nodejs
       zola
