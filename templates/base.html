@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"/>
   {% endif %}
   <link rel="stylesheet" href="{{ get_url(path="base.css") | safe }}"/>
+  {% block rss %}
+    <link rel="alternate" type="application/atom+xml" href="{{ get_url(path="atom.xml", trailing_slash=false) }}">
+  {% endblock %}
 </head>
 
 <body class="max-w-prose mx-auto">
