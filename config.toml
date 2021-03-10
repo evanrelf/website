@@ -1,7 +1,6 @@
 title = "Evan Relf"
 base_url = "/"
 compile_sass = true
-minify_html = true
 build_search_index = true
 generate_feed = true
 
