@@ -6,4 +6,8 @@ IFS=$'\n\t'
 set -x
 
 zola build
-postcss --replace public/tailwind.css
+
+purgecss \
+  --css node_modules/tailwindcss/dist/tailwind.min.css \
+  --content 'public/**/*.html' \
+  --output public/
