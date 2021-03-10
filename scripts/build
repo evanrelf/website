@@ -3,5 +3,7 @@
 set -Eeuo pipefail
 IFS=$'\n\t'
 
+set -x
+
 zola build
 postcss --replace public/tailwind.css
