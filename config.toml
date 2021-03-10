@@ -7,5 +7,11 @@ generate_feed = true
 [markdown]
 highlight_code = true
 highlight_theme = "Tomorrow"
+render_emoji = true
+
+[link_checker]
+skip_prefixes = [
+  "https://linkedin.com"
+]
 
 [extra]
