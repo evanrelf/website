@@ -14,7 +14,7 @@
   {% endif %}
   <link rel="stylesheet" href="{{ get_url(path="base.css") | safe }}"/>
   {% block rss %}
-    <link rel="alternate" type="application/atom+xml" href="{{ get_url(path="atom.xml", trailing_slash=false) }}">
+    <link rel="alternate" type="application/atom+xml" href="{{ get_url(path="atom.xml", trailing_slash=false) | safe }}">
   {% endblock %}
 </head>
 
