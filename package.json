@@ -9,8 +9,8 @@
     "build": "./scripts/build",
     "serve": "zola serve",
     "serve:drafts": "zola serve --drafts",
-    "deploy": "netlify deploy --dir public --open",
-    "deploy:prod": "netlify deploy --dir public --open --prod"
+    "deploy": "netlify deploy --dir $(nix-build --no-link) --open",
+    "deploy:prod": "netlify deploy --dir $(nix-build --no-link) --open --prod"
   },
   "devDependencies": {
     "purgecss": "^4.0.2",
