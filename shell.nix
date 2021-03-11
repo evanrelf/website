@@ -6,6 +6,7 @@ let
 in
   pkgs.mkShell {
     buildInputs = [
+      pkgs.netlify-cli
       pkgs.nodePackages.node2nix
       pkgs.nodejs
       pkgs.zola
