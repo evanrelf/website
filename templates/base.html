@@ -19,13 +19,13 @@
 </head>
 
 <body class="max-w-prose mx-auto">
-  <header class="website-header p-1 bg-black text-white font-bold">
+  <header class="website-header p-2 bg-black text-white font-bold">
     <a href="/">{{ config.title }}</a>
   </header>
-  <div class="website-content py-10 border-b-2">
+  <div class="website-content my-8">
   {% block content %}{% endblock content %}
   </div>
-  <footer class="website-footer pt-4 mb-20 text-center text-gray-500">
+  <footer class="website-footer mb-10 text-center text-gray-500">
     <ul>
       <li class="inline mx-2"><a href="/atom.xml">Feed</a></li>
       <li class="inline mx-2"><a href="/key.txt">PGP Key</a></li>

@@ -39,7 +39,7 @@ $offwhite: #eee;
   p {
     font-size: 16px;
     line-height: 28px;
-    margin: 15px 0px;
+    margin: 20px 0px;
   }
 
   a {
@@ -47,10 +47,8 @@ $offwhite: #eee;
   }
 
   img {
-    display: block;
     margin: auto;
     border-radius: 5px;
-    max-width: 100%;
   }
 
   blockquote {
@@ -61,7 +59,7 @@ $offwhite: #eee;
   }
 
   pre, code {
-    border: 1px solid $silver;
+    border-width: 1px;
     border-radius: 5px;
     font-family: Monaco, Consolas, monospace;
     font-size: 14px;
@@ -84,15 +82,12 @@ $offwhite: #eee;
   }
 
   li {
-    margin-left: 20px;
-    margin-bottom: 10px;
+    margin: 10px 0px 10px 20px;
     list-style-type: disc;
   }
 
   hr {
-    background-color: $silver;
-    height: 2px;
-    border: none;
+    border-bottom-width: 1px;
   }
 
   .zola-anchor {

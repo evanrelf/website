@@ -26,7 +26,7 @@ dapibus ultrices in iaculis. Aliquet porttitor lacus luctus accumsan tortor
 posuere ac ut. Turpis nunc eget lorem dolor sed. Auctor neque vitae tempus quam
 pellentesque. Tempor [commodo ullamcorper a lacus vestibulum](https://evanrelf.com).
 
-![Cute kitten](https://placekitten.com/500/350)
+![Cute kitten](https://placekitten.com/5000/3500)
 
 ### Heading 3
 
@@ -76,6 +76,8 @@ pellentesque. Tempor [commodo ullamcorper a lacus vestibulum](https://evanrelf.c
    Proin sagittis nisl rhoncus mattis rhoncus urna neque. Massa enim nec dui
    nunc mattis enim ut. Tortor condimentum lacinia quis vel eros donec. Cras
    adipiscing enim eu turpis egestas pretium aenean.
+
+  ![Cute kitten](https://placekitten.com/400/300)
 
 5. **Risus nullam eget felis eget nunc**
 
