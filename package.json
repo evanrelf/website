@@ -7,8 +7,10 @@
     "postinstall": "[ ! -f './scripts/node2nix' ] || ./scripts/node2nix",
     "node2nix": "./scripts/node2nix",
     "build": "./scripts/build",
-    "serve": "zola serve --drafts",
-    "deploy": "netlify deploy --dir public"
+    "serve": "zola serve",
+    "serve:drafts": "zola serve --drafts",
+    "deploy": "netlify deploy --dir public --open",
+    "deploy:prod": "netlify deploy --dir public --open --prod"
   },
   "devDependencies": {
     "purgecss": "^4.0.2",
