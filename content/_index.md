@@ -2,7 +2,7 @@
 sort_by = "date"
 +++
 
-<img class="float-right rounded-full" src="/avatar.jpg">
+<img class="float-right" src="/avatar.jpg">
 
 Software developer and functional programming enthusiast, working at [Awake
 Security](https://awakesecurity.com).

@@ -18,16 +18,25 @@
   {% endblock %}
 </head>
 
-<body class="max-w-prose mx-auto">
-  <header class="website-header p-2 bg-black text-white font-bold">
-    <a href="/">{{ config.title }}</a>
-  </header>
+<body class="max-w-prose mx-auto px-4 mb-8">
+  <a href="/">
+    <header class="
+      website-header
+      px-4 pt-8 pb-2
+      inline-block
+      bg-gradient-to-b from-indigo-700 to-purple-500
+      text-white font-bold
+    ">
+      {{ config.title }}
+    </header>
+  </a>
   <div class="website-content my-8">
   {% block content %}{% endblock content %}
   </div>
-  <footer class="website-footer mb-10 text-center text-gray-500">
+  <footer class="website-footer my-8 text-center text-gray-500">
     <ul>
-      <li class="inline mx-2"><a href="/atom.xml">Feed</a></li>
+      <!-- TODO: Re-enable feed once there's at least one blog post -->
+      <!-- <li class="inline mx-2"><a href="/atom.xml">Feed</a></li> -->
       <li class="inline mx-2"><a href="/key.txt">PGP Key</a></li>
     </ul>
   </footer>
